@@ -58,13 +58,13 @@ function App() {
               </li>
               <li>
                 <a className="ctp-text-blue hover:ctp-text-sapphire transition-colors duration-200"
-                  href="https://bsky.app/profile/paulocsb.dev‬" target="_blank" rel="noopener noreferrer">
+                  href="https://bsky.app/profile/paulocsb.dev" target="_blank" rel="noopener noreferrer">
                   <BlueskyIcon className='inline align-top w-6 h-6' /> Bluesky
                 </a>
               </li>
               <li>
                 <a className="ctp-text-blue hover:ctp-text-sapphire transition-colors duration-200"
-                  href="https://medium.com/@paulocsb‬" target="_blank" rel="noopener noreferrer">
+                  href="https://medium.com/@paulocsb" target="_blank" rel="noopener noreferrer">
                   <MediumIcon className='inline align-top w-6 h-6' /> Medium
                 </a>
               </li>
