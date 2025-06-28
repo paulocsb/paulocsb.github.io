@@ -1,0 +1,187 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+@import "tailwindcss";
+
+:root,
+[data-theme="terminal"] {
+  --ctp-rosewater: #f38ba8;
+  --ctp-flamingo: #fab387;
+  --ctp-pink: #f5c2e7;
+  --ctp-mauve: #cba6f7;
+  --ctp-red: #f38ba8;
+  --ctp-maroon: #eba0ac;
+  --ctp-peach: #fab387;
+  --ctp-yellow: #f9e2af;
+  --ctp-green: #8eedb3;
+  --ctp-teal: #94e2d5;
+  --ctp-sky: #89dceb;
+  --ctp-sapphire: #74c7ec;
+  --ctp-blue: #89b4fa;
+  --ctp-lavender: #b4befe;
+  --ctp-text: #b2bdc4;
+  --ctp-subtext1: #e0e0e0;
+  --ctp-subtext0: #c0c0c0;
+  --ctp-overlay2: #657c89;
+  --ctp-overlay1: #404040;
+  --ctp-overlay0: #303030;
+  --ctp-surface2: #252525;
+  --ctp-surface1: #1a1a1a;
+  --ctp-surface0: #121212;
+  --ctp-base: #283137;
+  --ctp-mantle: #0a0a0a;
+  --ctp-crust: #050505;
+}
+
+.ctp-bg-base {
+  background-color: var(--ctp-base);
+}
+.ctp-bg-surface0 {
+  background-color: var(--ctp-surface0);
+}
+.ctp-bg-green {
+  background-color: var(--ctp-green);
+}
+
+.ctp-text-text {
+  color: var(--ctp-text);
+}
+.ctp-text-subtext0 {
+  color: var(--ctp-subtext0);
+}
+.ctp-text-subtext1 {
+  color: var(--ctp-subtext1);
+}
+.ctp-text-pink {
+  color: var(--ctp-pink);
+}
+.ctp-text-blue {
+  color: var(--ctp-blue);
+}
+.ctp-text-green {
+  color: var(--ctp-green);
+}
+.ctp-text-mauve {
+  color: var(--ctp-mauve);
+}
+.ctp-text-sky {
+  color: var(--ctp-sky);
+}
+.ctp-text-sapphire {
+  color: var(--ctp-sapphire);
+}
+.ctp-text-base {
+  color: var(--ctp-base);
+}
+
+.ctp-border-overlay0 {
+  border-color: var(--ctp-overlay0);
+}
+.ctp-border-pink {
+  border-color: var(--ctp-pink);
+}
+
+/* Global base styles */
+* {
+  background-color: var(--ctp-base);
+  color: var(--ctp-text);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+}
+
+body {
+  @apply min-h-[95vh] flex flex-col text-base sm:text-xl antialiased;
+}
+
+h3 {
+  @apply inline-block text-inherit px-2 mb-0 bg-gradient-to-tl from-blue-500 to-purple-600;
+  color: var(--ctp-base);
+}
+
+a {
+  @apply no-underline transition-colors duration-200;
+  color: var(--ctp-blue);
+}
+
+a:hover {
+  color: var(--ctp-mauve);
+}
+
+footer {
+  @apply mt-auto;
+  color: var(--ctp-subtext0);
+}
+
+/* Terminal Animation Styles */
+.terminal-line {
+  @apply flex items-center font-mono gap-2;
+}
+
+.terminal-prompt {
+  color: var(--ctp-overlay2);
+}
+
+.terminal-separator {
+  color: var(--ctp-subtext0);
+}
+
+.terminal-cursor {
+  color: var(--ctp-green);
+}
+
+/* Terminal typing animation - for the command only */
+.typing-command {
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 10px solid var(--ctp-green);
+  animation: typing-command 0.5s steps(10) forwards,
+    blink 0.5s step-end infinite alternate 2s;
+}
+
+/* Content fade-in animation */
+.output {
+  @apply w-full;
+  max-width: 80ch;
+  animation: fadeIn 2s ease-in-out;
+  animation-fill-mode: both;
+}
+
+/* Hover states */
+.github:hover {
+  color: var(--ctp-green);
+}
+.twitter:hover {
+  color: var(--ctp-sky);
+}
+.bluesky:hover {
+  color: var(--ctp-sapphire);
+}
+.linkedin:hover {
+  color: var(--ctp-blue);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing-command {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 7ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
